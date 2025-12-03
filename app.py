@@ -191,7 +191,6 @@ with tab2:
                     score = model.score(X_test_s, y_test_s)
                     st.success(f"Modelo Entrenado! R2 Score: {score:.4f}")
                     
-                    # Gráfico
                     preds = scaler_y.inverse_transform(model.predict(X_test_s).reshape(-1,1))
                     fig, ax = plt.subplots(figsize=(10,4))
                     ax.plot(y_test.values[:50], label='Real')
